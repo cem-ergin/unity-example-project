@@ -33,3 +33,6 @@ UserSettings/
 
 # Crashlytics
 crashlytics-build.properties
+
+# Mono crash dump files
+mono_crash.mem.*.blob
