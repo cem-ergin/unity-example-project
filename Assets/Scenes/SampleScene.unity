@@ -1251,6 +1251,7 @@ MonoBehaviour:
   player: {fileID: 530945998}
   van: {fileID: 911468935}
   vanController: {fileID: 911468940}
+  playerMovement: {fileID: 530946000}
   playerCamera: {fileID: 963194227}
   vanCamera: {fileID: 292376616}
 --- !u!1 &1943192539

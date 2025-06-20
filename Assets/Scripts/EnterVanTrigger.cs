@@ -5,6 +5,7 @@ public class EnterVanTrigger : MonoBehaviour
   public GameObject player;
   public GameObject van;
   public VanController vanController;
+  public PlayerMovement playerMovement;
 
   public Camera playerCamera;
   public Camera vanCamera;
@@ -15,7 +16,6 @@ public class EnterVanTrigger : MonoBehaviour
 
   void Start()
   {
-    // Start with player camera ON, van camera OFF
     playerCamera.enabled = true;
     vanCamera.enabled = false;
   }
@@ -37,8 +37,11 @@ public class EnterVanTrigger : MonoBehaviour
       }
       else
       {
-        // Exit van
-        player.transform.position = van.transform.position + Vector3.up * 2f + Vector3.left * 2f;
+        player.transform.position = van.transform.position + Vector3.up * 2f - van.transform.right * 2f;
+        player.transform.rotation = van.transform.rotation;
+        playerMovement.AlignWithRotation(van.transform.rotation);
+
+
         player.SetActive(true);
         vanController.SetDriving(false);
 

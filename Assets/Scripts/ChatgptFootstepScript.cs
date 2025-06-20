@@ -22,7 +22,6 @@ public class FootstepAudio : MonoBehaviour
     bool isMoving = characterController.velocity.magnitude > 0.1f && characterController.isGrounded;
     bool isRunning = Input.GetKey(KeyCode.LeftShift); // Customize for your game
 
-    // Debug.Log($"Moving: {characterController.velocity.magnitude:F2} | Running: {Input.GetKey(KeyCode.LeftShift)}");
 
     if (isMoving)
     {

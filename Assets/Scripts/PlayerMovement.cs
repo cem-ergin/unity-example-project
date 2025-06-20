@@ -22,6 +22,16 @@ public class PlayerMovement : MonoBehaviour
 
   private bool canMove = true;
 
+  public void AlignWithRotation(Quaternion targetRotation)
+  {
+    // Set player rotation (yaw)
+    transform.rotation = targetRotation;
+
+    // Reset vertical look (pitch)
+    rotationX = 0f;
+    playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
+  }
+
   void Start()
   {
     characterController = GetComponent<CharacterController>();
