@@ -11,7 +11,7 @@ public class VanFollowCamera : MonoBehaviour
     if (target == null) return;
 
     // Offset relative to the van's local space (behind it)
-    Vector3 desiredPosition = target.position + target.TransformDirection(offset) + Vector3.left * 5f;
+    Vector3 desiredPosition = target.position + target.TransformDirection(offset);
     transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
 
     // Look at the van

@@ -18,8 +18,11 @@ public class VanController : MonoBehaviour
 
     float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
     float turn = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
+    if (move != 0)
+    {
+      transform.Translate(Vector3.forward * move);
+      transform.Rotate(Vector3.up * turn);
+    }
 
-    transform.Translate(Vector3.forward * move);
-    transform.Rotate(Vector3.up * turn);
   }
 }

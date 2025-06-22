@@ -42,8 +42,6 @@ public class FootstepAudio : MonoBehaviour
   void PlayFootstep(bool running)
   {
     AudioClip clipToPlay = running ? runClip : walkClip;
-    Debug.Log($"ClipToPlay: {clipToPlay.name} | Running: {running}");
-    Debug.Log($"AudioSource isPlaying: {audioSource.isPlaying} | Clip: {audioSource.clip?.name}");
 
     if (audioSource.isPlaying)
     {
